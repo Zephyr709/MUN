@@ -1,0 +1,5 @@
+Q1 A. The format to use when submitting python is firstName_lastName_studentID_question#.py . A few applications to write Python could be VSCode or Pycharm.
+
+B. Use the snip n sketch software on windows to capture a portion of your screen and submit it as a PDF in the Zip file
+
+C. False | True | False
