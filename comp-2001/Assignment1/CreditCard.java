@@ -1,7 +1,12 @@
+/*
+ * Jager Cooper
+ * 201765344
+ */
+
 import java.util.ArrayList;
 
 public class CreditCard {
-    /*Class Attributes */
+    /* Class Attributes */
     private String customerName;
     private String accountNumber;
     private float balance;
@@ -10,9 +15,9 @@ public class CreditCard {
     private ArrayList<Transaction> transactionHistory;
 
 
-    /*Constructor */
+    /* Constructor */
     public CreditCard(String name, String accountNum, float creditLim) {
-        /*Attribute Initialization */
+        /* Attribute Initialization */
         customerName = name;
         accountNumber = accountNum;
         balance = 0.00f;
@@ -22,9 +27,7 @@ public class CreditCard {
 
     }
 
-    /*
-     * Mutator and accessor methods below
-     */
+    /* Mutator and accessor methods */
     public String getCustomerName() {
         return customerName;
     }
@@ -53,6 +56,10 @@ public class CreditCard {
         return creditLimit;
     }
 
+    public void setCreditLimit(float creditLimit) {
+        this.creditLimit = creditLimit;
+    }
+
     public float getCreditAvail() {
         return creditAvail;
     }
@@ -69,9 +76,44 @@ public class CreditCard {
         this.transactionHistory = transactionHistory;
     }
 
-    /*
-     * Additional Methods
-     */
+    /* Additional Methods */
 
+     public void purchase(float amount, String source) {
+        /*
+         * This function updates the balance and credit available based upon a purchase 
+         * transaction and creates a transaction object.
+         */
+
+        balance += amount;
+        creditAvail -= amount;
+
+        /*transaction object creation */
+         
+
+     }
+
+     public void payback() {
+        /*
+         * This function updates the balance and credit available based upon a payback
+         * transaction and creates a transaction object.
+         */
+
+
+         
+     }
      
+     public void printHistory() {
+        /* This Function prints out the transaction history of the credit card */
+
+
+     }
+
+     public void cashBackBonus() {
+        /* 
+         * Generates a 3% cash back bonus based upon transaction history 
+         * and adds the refund to the credit card account
+        */
+
+
+     }
 }

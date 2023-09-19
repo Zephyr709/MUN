@@ -6,9 +6,9 @@
 
 Assume that a bank maintains a credit card account for each customer. The credit card account offers convenience to users by allowing them to make purchases without having to carry cash, and by allowing them to pay the balance within a certain duration without incurring any fines. Each purchase or pay balance can be considered as a transaction.
 
-Create two classes: CreditCard and Transaction.
+### Create two classes: CreditCard and Transaction
 
-The CreditCard class should store the following information for each customer:
+#### The CreditCard class should store the following information for each customer
 
 - Customer name (a String)
 
@@ -18,7 +18,7 @@ The CreditCard class should store the following information for each customer:
 - Credit available (a float)
 - Transaction history (a List of Transaction objects, can use ArrayList)
 
-The CreditCard class should have the following member functions:
+#### The CreditCard class should have the following member functions
 
 - A Constructor that takes in parameters to initialize customerName, accountNumber, creditLimit fields.
 
@@ -27,11 +27,12 @@ The CreditCard class should have the following member functions:
 - public void payback (float amount): Pay back an amount to the account. The transaction vendor should be indicated as "Payback". The function should update the balance and credit available accordingly, and should add a new Transaction object to the transaction history with the vendor set to "Payback".
   
 - public void printHistory(): Print a string representation of the transaction history.
-Get accessors and set mutators for the class attributes.
+
+- Get accessors and set mutators for the class attributes.
 
 - An additional member function that you think would be interesting or useful.
   
-The Transaction class should have the following fields:
+#### The Transaction class should have the following fields
 
 - Source (the vendor for the transaction, a String)
   
