@@ -56,6 +56,11 @@ public class Transaction {
     }
     
     public String toString() {
-        return "a";
+        return (
+            "Source: " + source +
+            "\nDate: " + date.toString() +
+            "\nAmount: " + amount +
+            "\nPurchase Type: " + purchaseType 
+            );
     }
 }
