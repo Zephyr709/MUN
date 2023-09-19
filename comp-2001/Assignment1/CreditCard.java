@@ -3,13 +3,19 @@ import java.util.ArrayList;
 public class CreditCard {
     String customerName;
     String accountNumber;
-    Float balance;
-    Float creditLimit;
-    Float creditAvail;
-    ArrayList transactionHistory;
+    float balance;
+    float creditLimit;
+    float creditAvail;
+    ArrayList<Object> transactionHistory;
     
 
-    public CreditCard(){
+    public CreditCard(String name, String accountNum, float creditLim) {
+        customerName = name;
+        accountNumber = accountNum;
+        balance = 0.00f;
+        creditLimit = creditLim;
+        creditAvail = 0.00f;
+        transactionHistory = new ArrayList<>();
 
     }
 
