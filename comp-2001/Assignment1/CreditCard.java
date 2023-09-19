@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class CreditCard {
+    /*Class Attributes */
     private String customerName;
     private String accountNumber;
     private float balance;
@@ -9,7 +10,9 @@ public class CreditCard {
     private ArrayList<Transaction> transactionHistory;
 
 
+    /*Constructor */
     public CreditCard(String name, String accountNum, float creditLim) {
+        /*Attribute Initialization */
         customerName = name;
         accountNumber = accountNum;
         balance = 0.00f;
@@ -19,10 +22,12 @@ public class CreditCard {
 
     }
 
+    /*
+     * Mutator and accessor methods below
+     */
     public String getCustomerName() {
         return customerName;
     }
-
 
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
@@ -64,4 +69,9 @@ public class CreditCard {
         this.transactionHistory = transactionHistory;
     }
 
+    /*
+     * Additional Methods
+     */
+
+     
 }
