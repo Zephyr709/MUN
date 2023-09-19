@@ -8,7 +8,11 @@ import java.sql.Date;
 public class Transaction {
     /* Class Attributes */
     private String source;
-    private Date date;
+    private Date date; 
+    /* new Date(); - Gets current Date 
+     * Date.toString() -  Converts the date object to a string of 
+     * the form: int(year,month,day,min,sec) 
+     */
     private float amount;
     private String purchaseType;
 
@@ -51,4 +55,7 @@ public class Transaction {
         this.amount = amount;
     }
     
+    public String toString() {
+        return "a";
+    }
 }
