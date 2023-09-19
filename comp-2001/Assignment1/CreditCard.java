@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 
 public class CreditCard {
-    String customerName;
-    String accountNumber;
-    float balance;
-    float creditLimit;
-    float creditAvail;
-    ArrayList<Object> transactionHistory;
-    
+    private String customerName;
+    private String accountNumber;
+    private float balance;
+    private float creditLimit;
+    private float creditAvail;
+    private ArrayList<Transaction> transactionHistory;
+
 
     public CreditCard(String name, String accountNum, float creditLim) {
         customerName = name;
@@ -28,7 +28,40 @@ public class CreditCard {
         this.customerName = customerName;
     }
 
+    public String getAccountNumber() {
+        return accountNumber;
+    }
     
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
 
+    public float getBalance() {
+        return balance;
+    }
+
+    public void setBalance(float balance) {
+        this.balance = balance;
+    }
+
+    public float getCreditLimit() {
+        return creditLimit;
+    }
+
+    public float getCreditAvail() {
+        return creditAvail;
+    }
+
+    public void setCreditAvail(float creditAvail) {
+        this.creditAvail = creditAvail;
+    }
+
+    public ArrayList<Transaction> getTransactionHistory() {
+        return transactionHistory;
+    }
+
+    public void setTransactionHistory(ArrayList<Transaction> transactionHistory) {
+        this.transactionHistory = transactionHistory;
+    }
 
 }
