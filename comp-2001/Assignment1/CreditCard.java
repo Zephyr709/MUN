@@ -86,25 +86,30 @@ public class CreditCard {
 
         balance += amount;
         creditAvail -= amount;
-
-        /*transaction object creation */
+        transactionHistory.add(0, new Transaction(source, amount, "Purchase"));
          
 
      }
 
-     public void payback() {
+     public void payback(float amount, String source) {
         /*
          * This function updates the balance and credit available based upon a payback
          * transaction and creates a transaction object.
          */
 
+         balance -= amount;
+         creditAvail += amount;
+         transactionHistory.add(0, new Transaction(source, amount, "Payback"));
 
          
      }
      
      public void printHistory() {
         /* This Function prints out the transaction history of the credit card */
-
+        for (int i = 0; i < transactionHistory.size(); i++){
+            System.out.println(transactionHistory.get(i));
+            
+        }
 
      }
 
