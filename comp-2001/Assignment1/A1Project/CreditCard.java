@@ -3,7 +3,6 @@
  * 201765344
  */
 
-import java.security.Provider;
 import java.util.ArrayList;
 
 public class CreditCard {
@@ -69,7 +68,7 @@ public class CreditCard {
         this.creditAvail = creditAvail;
     }
 
-    public ArrayList getTransactionHistory() {
+    public ArrayList<Transaction> getTransactionHistory() {
         return transactionHistory;
     }
 
@@ -85,10 +84,14 @@ public class CreditCard {
          * transaction and creates a transaction object.
          */
 
-        balance += amount;
-        creditAvail -= amount;
-        transactionHistory.add(0, new Transaction(source, amount, "Purchase"));
-         
+        if (amount < creditAvail) {
+            balance += amount;
+            creditAvail -= amount;
+            transactionHistory.add(0, new Transaction(source, amount, "Purchase"));
+        } else {
+            System.out.println("Insufficient funds");
+        }
+            
 
      }
 
