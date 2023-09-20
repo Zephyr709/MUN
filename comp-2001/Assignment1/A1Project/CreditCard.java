@@ -111,7 +111,7 @@ public class CreditCard {
      public void printHistory() {
         /* This Function prints out the transaction history of the credit card */
         for (int i = 0; i < transactionHistory.size(); i++){
-            System.out.println(transactionHistory.get(i));
+            System.out.println("\n" + transactionHistory.get(i) + "\n");
             
         }
 
