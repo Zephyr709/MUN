@@ -3,12 +3,12 @@
  * 201765344
  */
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 public class Transaction {
     /* Class Attributes */
     private String source;
-    private LocalDateTime date; 
+    private Date date; 
     /* new Date(); - Gets current Date 
      * Date.toString() -  Converts the date object to a string of 
      * the form: int(year,month,day,min,sec) 
@@ -21,8 +21,8 @@ public class Transaction {
         this.source = source;
         this.amount = amount;
         this.purchaseType = purchaseType;
-        this.date = LocalDateTime.now();
-        System.out.println(this.date);
+        this.date = new Date();
+        
 
     }
     
@@ -43,11 +43,11 @@ public class Transaction {
         this.source = source;
     }
 
-    public LocalDateTime getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
