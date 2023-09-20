@@ -68,7 +68,7 @@ public class CreditCard {
         this.creditAvail = creditAvail;
     }
 
-    public ArrayList<Transaction> getTransactionHistory() {
+    public ArrayList getTransactionHistory() {
         return transactionHistory;
     }
 
@@ -126,15 +126,13 @@ public class CreditCard {
                 x += transactionHistory.get(i).getAmount();
             }
             
+        }
         /* Calculates the cash back bonus and applies it to the account */
         float bonus = x * 0.03f;
         balance -= bonus;
         creditAvail += bonus;
 
         System.out.println("Your cash back bonus is: " + bonus);
-        
-        }
-
 
      }
 }
