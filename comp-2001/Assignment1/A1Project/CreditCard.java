@@ -3,6 +3,7 @@
  * 201765344
  */
 
+import java.security.Provider;
 import java.util.ArrayList;
 
 public class CreditCard {
@@ -131,6 +132,7 @@ public class CreditCard {
         float bonus = x * 0.03f;
         balance -= bonus;
         creditAvail += bonus;
+        transactionHistory.add(0, new Transaction("Credit Provider", bonus, "Payback"));
 
         System.out.println("Your cash back bonus is: " + bonus);
 
