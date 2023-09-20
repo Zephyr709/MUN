@@ -22,7 +22,7 @@ public class CreditCard {
         accountNumber = accountNum;
         balance = 0.00f;
         creditLimit = creditLim;
-        creditAvail = 0.00f;
+        creditAvail = creditLim;
         transactionHistory = new ArrayList<>();
 
     }
