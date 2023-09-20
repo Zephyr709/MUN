@@ -119,6 +119,22 @@ public class CreditCard {
          * and adds the refund to the credit card account
         */
 
+        float x = 0.0f;
+
+        for (int i = 0; i < transactionHistory.size (); i++){
+            if (transactionHistory.get(i).getPurchaseType() == "Purchase"){
+                x += transactionHistory.get(i).getAmount();
+            }
+            
+        /* Calculates the cash back bonus and applies it to the account */
+        float bonus = x * 0.03f;
+        balance -= bonus;
+        creditAvail += bonus;
+
+        System.out.println("Your cash back bonus is: " + bonus);
+        
+        }
+
 
      }
 }
