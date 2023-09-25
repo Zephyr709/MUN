@@ -60,3 +60,45 @@ class ArrayStack:
     if self.is_empty():
       raise Exception('Stack is empty')
     return self._data.pop()               # remove last item from list
+  
+  def __eq__(self,other):
+    """
+    implements the == operation.
+    
+    returns true if the current stack contains the same contents, in the same order as the other stack, otherwise false. 
+    
+    does not modify this stack or the other stack 
+    """
+    return 
+  
+  def __ne__(self,other):
+    """
+    implements the != operation. 
+    
+    returns true if the contents of the two stacks are different or in a different order, otherwise false.
+    
+    does not modify this stack or the other stack.
+    """
+    return
+  
+  def __iadd__(self,other):
+    """
+    implements the += operation. 
+    
+    adds the contents of a second stack, other, onto the top of the current stack and returns the combined stack. 
+    
+    does not modify the other stack.
+    """
+    return
+  
+  def __str__(self,other):
+    """
+    implements the str() operation. 
+    
+    returns a string representation of the contents of this stack.
+    
+    the string is formatted as [a, b, c, ...], where a, b, c, etc are the elements stored in the stack, with the top of the stack to the left. 
+    
+    does not modify the stack.
+    """
+    return

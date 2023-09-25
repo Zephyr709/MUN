@@ -31,18 +31,18 @@ programming etiquette - do not access private methods or variables of other obje
 
 #### __eq__(self, other)
 
-- implements the == operationN returns true if the current stack contains the same contents. in
+- implements the == operation. returns true if the current stack contains the same contents, in
 the same order as the other stack, otherwise false. does not modify this stack or the other
 stack
 
 #### __ne__(self, other)
 
-- implements the != operationN returns true if the contents of the two stacks are different or in a
+- implements the != operation. returns true if the contents of the two stacks are different or in a
 different order, otherwise false, does not modify this stack or the other stack.
 
 #### __iadd__(self, other)
 
-- implements the += operationN adds the contents of a second stackL otherL onto the top of the
+- implements the += operation. adds the contents of a second stack, other, onto the top of the
 current stack and returns the combined stack, does not modify the other stack.
 
 #### __str__(self, other)
