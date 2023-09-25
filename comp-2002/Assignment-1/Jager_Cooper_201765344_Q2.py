@@ -61,6 +61,8 @@ class ArrayStack:
       raise Exception('Stack is empty')
     return self._data.pop()               # remove last item from list
   
+  
+  
   def __eq__(self,other):
     """
     implements the == operation.
