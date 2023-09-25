@@ -7,4 +7,3 @@ def question1(m,n,p):
         return m + n
     
     return question1(m, math.log2(n), math.log2(p)) + question1(m, n/2, question1(m,n,math.log2(p)))
-
