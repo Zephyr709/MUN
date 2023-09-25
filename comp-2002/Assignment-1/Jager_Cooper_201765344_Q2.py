@@ -1,3 +1,6 @@
+# Jager Cooper
+# 201765344
+
 # Copyright 2013, Michael H. Goldwasser
 #
 # Developed for use with the book:

@@ -1,3 +1,6 @@
+# Jager Cooper
+# 201765344
+
 import math
 
 def question1(m,n,p):
