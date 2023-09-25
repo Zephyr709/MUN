@@ -7,6 +7,7 @@
 the goal of this assignment is to gain experience with recursion and stacks.
 
 ### Question 1: (30 pts)
+
 implement a recursive functionL named question1(). that computes the mathematical function
 below.
 
@@ -35,17 +36,24 @@ the same order as the other stack, otherwise false. does not modify this stack o
 stack
 
 #### __ne__(self, other)
-implements the != operationN returns true if the contents of the two stacks are different or in a
-different orderL otherwise falseN does not modify this stack or the other stackN
+
+- implements the != operationN returns true if the contents of the two stacks are different or in a
+different order, otherwise false, does not modify this stack or the other stack.
+
 #### __iadd__(self, other)
-implements the += operationN adds the contents of a second stackL otherL onto the top of the
-current stack and returns the combined stackN does not modify the other stackN
-__str__(self, other)
-comp RPPR 5 assignment 1 1 O S
-implements the str() operationN returns a string representation of the contents of this stackN
-the string is formatted as [a, b, c, ...]L where aL bL cL etc are the elements stored in the
-stackL with the top of the stack to the leftN does not modify the stackN
-example
+
+- implements the += operationN adds the contents of a second stackL otherL onto the top of the
+current stack and returns the combined stack, does not modify the other stack.
+
+#### __str__(self, other)
+
+- implements the str() operation. returns a string representation of the contents of this stack.
+the string is formatted as [a, b, c, ...], where a, b, c, etc are the elements stored in the
+stack, with the top of the stack to the left. does not modify the stack.
+
+#### Example
+
+``` python
 >>> a = ArrayStack()
 >>> a.push(5)
 >>> a.push(10)
@@ -73,3 +81,4 @@ False
 ’[1, 2, 3]’
 >>> a == c
 False
+```
