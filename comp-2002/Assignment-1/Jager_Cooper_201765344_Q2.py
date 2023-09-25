@@ -71,7 +71,14 @@ class ArrayStack:
     
     does not modify this stack or the other stack 
     """
-    return 
+    if len(self._data) != len(other._data):
+      return False
+    
+    for i in range(0,len(self._data)):
+      if self._data[i] != other._data[i]:
+        return False
+    
+    return True
   
   def __ne__(self,other):
     """
@@ -81,7 +88,15 @@ class ArrayStack:
     
     does not modify this stack or the other stack.
     """
-    return
+    
+    if len(self._data) != len(other._data):
+      return True
+    
+    for i in range(0,len(self._data)):
+      if self._data[i] != other._data[i]:
+        return True
+    
+    return False
   
   def __iadd__(self,other):
     """
