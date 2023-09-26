@@ -106,7 +106,8 @@ class ArrayStack:
     
     does not modify the other stack.
     """
-    
+    for element in other._data:
+      self._data.append(element)
     
     return
   
