@@ -109,7 +109,7 @@ class ArrayStack:
     for element in other._data:
       self._data.append(element)
     
-    return
+    return self
   
   def __str__(self):
     """
@@ -122,12 +122,15 @@ class ArrayStack:
     does not modify the stack.
     """
     strArray = ""
-    
+    i = 0
     for element in self._data:
-      strArray = str(element) + strArray
+      if i == 0:
+        strArray = str(element) + strArray
+      else:
+        strArray = str(element) + ", " + strArray
+      i += 1
       
-    
-    return ("[" + "]")
+    return ("[" + strArray + "]")
   
   
 def main():
@@ -143,12 +146,13 @@ def main():
     
     print(a != b)
     
-    str(a)
+    print(str(a))
     
     c = ArrayStack()
     c.push(3)
     c.push(2)
     c.push(1)
+    
     print(str(c))
     
     a += c
