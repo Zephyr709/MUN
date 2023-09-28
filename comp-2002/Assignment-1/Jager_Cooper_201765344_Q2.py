@@ -111,7 +111,7 @@ class ArrayStack:
     
     return
   
-  def __str__(self,other):
+  def __str__(self):
     """
     implements the str() operation. 
     
@@ -121,4 +121,15 @@ class ArrayStack:
     
     does not modify the stack.
     """
+    strArray = ""
+    
+    for element in self._data:
+      strArray = str(element) + strArray
+      
+    print("[" + "]")
+    
     return
+  
+  
+def main():
+  return 
