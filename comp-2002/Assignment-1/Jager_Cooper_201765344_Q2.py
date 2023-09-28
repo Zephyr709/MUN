@@ -126,10 +126,36 @@ class ArrayStack:
     for element in self._data:
       strArray = str(element) + strArray
       
-    print("[" + "]")
     
-    return
+    return ("[" + "]")
   
   
 def main():
-  return 
+    a = ArrayStack()
+    a.push(5)
+    a.push(10)
+    a.push(15)
+    b = ArrayStack()
+    b.push(5)
+    b.push(10)
+    b.push(15)
+    print(a == b)
+    
+    print(a != b)
+    
+    str(a)
+    
+    c = ArrayStack()
+    c.push(3)
+    c.push(2)
+    c.push(1)
+    print(str(c))
+    
+    a += c
+    print(str(a))
+    
+    print(str(c))
+    
+    print(a == c)
+
+main()
