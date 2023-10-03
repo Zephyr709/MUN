@@ -1,11 +1,13 @@
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Manage the stock in a business.
  * The stock is described by zero or more Products.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Jager Cooper
+ * @version 03/10/23
  */
 public class StockManager
 {
@@ -37,6 +39,15 @@ public class StockManager
      */
     public void delivery(int id, int amount)
     {
+        Product p = findProduct(id);
+        if (p != null)
+        {
+            p.increaseQuantity(amount);
+        }
+        else
+        {
+            System.out.println("No product with ID " + id);
+        }
     }
     
     /**
@@ -46,7 +57,15 @@ public class StockManager
      */
     public Product findProduct(int id)
     {
-        //temparally return null as a place holder
+        
+        for (Product p : stock)
+        {
+            if (p.getID() == id)
+            {
+                return p;
+            }
+        }
+
         return null;
     }
     
@@ -59,8 +78,15 @@ public class StockManager
      */
     public int numberInStock(int id)
     {
-        //temparally return 0 as a place holder
-        return 0;
+        Product product = this.findProduct(id);
+
+        if (product != null){
+            return product.getQuantity();
+        }
+        else {
+            return 0;
+        }
+        
     }
 
     /**
@@ -68,5 +94,41 @@ public class StockManager
      */
     public void printProductDetails()
     {
+        if (stock.size() == 0){
+            System.out.println("There are no products in stock.");
+        }
+        else{
+            for (Product p : stock)
+            {
+                System.out.println(p.toString());
+            }
+        }
+    }
+
+    /**
+     * Print details of all the products with a stock level
+     * below the given threshold. Implemented with Lambdas and Streams.
+     * @param lowThreshold The threshold to use.
+     */
+    public void lowStock(int lowThreshold){
+        if (stock.size() == 0) {
+            System.out.println("There are no products in stock.");
+        }
+
+        else {
+
+            List<Product> list = 
+            stock.stream()
+            .filter(products -> products.getQuantity() < lowThreshold)
+            .collect(Collectors.toList());
+
+            if (list.size() == 0) {
+                System.out.println("There are no products with a stock level below " + lowThreshold);
+            } else {
+                list.stream()
+                .forEach(products -> System.out.println(products.toString()));
+            }
+            
+        }
     }
 }
