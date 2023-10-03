@@ -116,12 +116,13 @@ public class StockManager
         }
 
         else {
-
+            // Streams, Filters, and collects to a list for validation
             List<Product> list = 
             stock.stream()
             .filter(products -> products.getQuantity() < lowThreshold)
             .collect(Collectors.toList());
 
+            //Validates that the stream has at least one element that meets requirements
             if (list.size() == 0) {
                 System.out.println("There are no products with a stock level below " + lowThreshold);
             } else {
@@ -130,5 +131,9 @@ public class StockManager
             }
             
         }
+    }
+
+    public Product findProduct(String name){
+        return null;
     }
 }
