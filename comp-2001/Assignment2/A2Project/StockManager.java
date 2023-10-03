@@ -133,6 +133,7 @@ public class StockManager
             if (list.size() == 0) {
                 System.out.println("There are no products with a stock level below " + lowThreshold);
             } else {
+                System.out.println("Products with a stock level below " + lowThreshold);
                 list.stream()
                 .forEach(products -> System.out.println(products.toString()));
             }
