@@ -133,7 +133,20 @@ public class StockManager
         }
     }
 
+    /**
+     * Find a product with the given name.
+     * @param name The name of the product.
+     * @return The identified product, or null if there is none.
+     */
     public Product findProduct(String name){
+        for (Product p : stock)
+        {
+            if (p.getName().equals(name))
+            {
+                return p;
+            }
+        }
+        
         return null;
     }
 }
