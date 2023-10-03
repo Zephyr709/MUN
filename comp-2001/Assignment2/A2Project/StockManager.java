@@ -28,6 +28,13 @@ public class StockManager
      */
     public void addProduct(Product item)
     {
+        for (Product p : stock){
+            if (p.getID() == item.getID())
+            {
+                System.out.println("Product is already in stock.");
+                return;
+            }
+        }   
         stock.add(item);
     }
     
@@ -146,7 +153,7 @@ public class StockManager
                 return p;
             }
         }
-        
+
         return null;
     }
 }
