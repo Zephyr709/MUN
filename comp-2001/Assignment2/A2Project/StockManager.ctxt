@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=StockManager
-comment0.text=\r\n\ Manage\ the\ stock\ in\ a\ business.\r\n\ The\ stock\ is\ described\ by\ zero\ or\ more\ Products.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Manage\ the\ stock\ in\ a\ business.\r\n\ The\ stock\ is\ described\ by\ zero\ or\ more\ Products.\r\n\ \r\n\ @author\ Jager\ Cooper\r\n\ @version\ 03/10/23\r\n
 comment1.params=
 comment1.target=StockManager()
 comment1.text=\r\n\ Initialise\ the\ stock\ manager.\r\n
@@ -19,4 +19,10 @@ comment5.text=\r\n\ Locate\ a\ product\ with\ the\ given\ ID,\ and\ return\ how\
 comment6.params=
 comment6.target=void\ printProductDetails()
 comment6.text=\r\n\ Print\ details\ of\ all\ the\ products.\r\n
-numComments=7
+comment7.params=lowThreshold
+comment7.target=void\ lowStock(int)
+comment7.text=\r\n\ Print\ details\ of\ all\ the\ products\ with\ a\ stock\ level\r\n\ below\ the\ given\ threshold.\ Implemented\ with\ Lambdas\ and\ Streams.\r\n\ @param\ lowThreshold\ The\ threshold\ to\ use.\r\n
+comment8.params=name
+comment8.target=Product\ findProduct(java.lang.String)
+comment8.text=\r\n\ Find\ a\ product\ with\ the\ given\ name.\r\n\ @param\ name\ The\ name\ of\ the\ product.\r\n\ @return\ The\ identified\ product,\ or\ null\ if\ there\ is\ none.\r\n
+numComments=9
