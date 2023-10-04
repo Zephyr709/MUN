@@ -72,7 +72,19 @@ class LinkedList():
         print("Your Linked list has been concatenated!")
             
         # Time complexity: O(n).
-            
+
+    def __len__(self):
+        curr = self._head
+        count = 1
+        while curr._next!= None: # type: ignore
+            count += 1
+            curr = curr._next # type: ignore
+
+        return count
+
+
+
+
 def main():
     l = LinkedList()
     l.add_first(1)
@@ -94,6 +106,8 @@ def main():
     l.concatenate(m)
     l.findSecondLast()
     print(l.first_element())
+    
+    print(len(l))
     
     
 main()
