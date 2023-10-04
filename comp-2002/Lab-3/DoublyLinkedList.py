@@ -49,3 +49,19 @@ class DoublyLinkedList:
 
     def delete_last(self):
         self._delete_node(self._trailer._prev)
+        
+    def middleNode(self):
+        headEnd = self._header._next
+        tailEnd = self._trailer._prev 
+        if headEnd == tailEnd:
+                return headEnd
+            
+        while True:
+            headEnd = headEnd._next # type: ignore
+            if headEnd == tailEnd:
+                return headEnd
+            
+            tailEnd = tailEnd._prev # type: ignore
+            if headEnd == tailEnd:
+                return headEnd
+            
