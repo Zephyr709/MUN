@@ -81,7 +81,16 @@ class LinkedList():
             curr = curr._next # type: ignore
 
         return count
+    
+    def recurLen(self):
+        if self.is_empty():
+            return 0
+        if self._head._next == None: # type: ignore
+            return 1
+        
+        return None
 
+    
 
 
 
