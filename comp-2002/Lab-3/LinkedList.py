@@ -12,14 +12,14 @@ class LinkedList():
         self._size = 0
 
     def first_element(self):
-        return self._head._element
+        return self._head._element #type: ignore
     
     def is_empty(self):
         return self._head == None
 
     def add_first(self, e):
         node = self._Node(e)
-        node._next = self._head
+        node._next = self._head # type: ignore
         
         # if list is empty, the head and tail point to the same node
         if self.is_empty():
@@ -33,7 +33,7 @@ class LinkedList():
         if self.is_empty():
             raise Exception("Linked List is empty!")
         node = self._head
-        self._head = self._head._next
+        self._head = self._head._next # type: ignore
         node = None
         self._size -= 1
         
@@ -46,7 +46,18 @@ class LinkedList():
             # set _next pointer of current tail node to point to the new node
             # and set the new node as the tail
             node = self._Node(e)
-            self._tail._next = node
+            self._tail._next = node # type: ignore
             self._tail = node
         self._size += 1
+        
+        def findSecondLast(self):
+            curr = self._head
+            prev = None
+            while curr._next != None:
+                prev = curr
+                curr = curr._next
+            
+            return prev 
+        
+        
         
