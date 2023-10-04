@@ -50,14 +50,63 @@ class LinkedList():
             self._tail = node
         self._size += 1
         
-        def findSecondLast(self):
-            curr = self._head
-            prev = None
-            while curr._next != None:
-                prev = curr
-                curr = curr._next
+    def findSecondLast(self):
+        curr = self._head
+        prev = None
+        
+        while curr._next != None: # type: ignore
+            prev = curr
+            curr = curr._next # type: ignore
+        
+        print(prev._element) # type: ignore
+        return prev 
+        
+    def concatenate(self, other):
+        currL = self._head
             
-            return prev 
-        
-        
-        
+        while currL._next!= None: # type: ignore
+            currL = currL._next # type: ignore
+                
+        currL._next = other._head # type: ignore
+            
+        print("Your Linked list has been concatenated!")
+            
+        # Time complexity: O(n).
+            
+def main():
+    l = LinkedList()
+    l.add_first(1)
+    l.add_first(2)
+    l.add_first(3)
+    l.add_first(4)
+    l.add_first(5)
+  
+    
+    m = LinkedList()
+    m.add_first(6)
+    m.add_first(7)
+    m.add_first(8)
+    m.add_first(9)
+    m.add_first(10)
+    
+    l.findSecondLast()
+    print(l.first_element())
+    l.concatenate(m)
+    l.findSecondLast()
+    print(l.first_element())
+    
+    
+main()
+    
+    
+    
+            
+            
+                
+            
+            
+            
+            
+            
+            
+      
