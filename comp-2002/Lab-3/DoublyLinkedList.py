@@ -50,7 +50,7 @@ class DoublyLinkedList:
     def delete_last(self):
         self._delete_node(self._trailer._prev)
         
-    def middleNode(self):
+    def findMiddleNode(self):
         headEnd = self._header._next
         tailEnd = self._trailer._prev 
         if headEnd == tailEnd:
@@ -64,4 +64,6 @@ class DoublyLinkedList:
             tailEnd = tailEnd._prev # type: ignore
             if headEnd == tailEnd:
                 return headEnd
+            
+    
             
