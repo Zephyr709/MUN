@@ -92,42 +92,48 @@ class BinaryTree():
         valList = s.split(", ")
         
         for i in range(len(valList)):
-            if valList[i] == 'None':
+            if (self.somethingNotNone(valList[i:])== False):
+                break     
+            elif valList[i] == 'None':
                 self._data.append(None)
             else:
                 self._data.append(valList[i])
 
-
+    def somethingNotNone(self,someList):
+        for item in someList:
+            if item != 'None':
+                return True
+            
+        return False
+        
     def boundary_traversal(self):
         """ Prints a boundary traversal of the tree. """
 
         # TO DO: Question 2
         x = 0
-        while (2^^x) < len(self._data):
-            
+        while (2**x) < len(self._data):
+            x += 1
+        while len(self._data) < (2**x):
+            self._data.append(None)
         
         
         i = 1
         valList = []
-        #print("Start of left side.")
+       
         while i < (len(self._data)/2):
-            #print(self._data[i], i, valList)
             if self._data[i] != None:
                 valList.append(self._data[i])
             i = i*2
         
-        #print("Start of bottom side.")
         i = int(len(self._data)/2)
         while i < len(self._data):
-            #print(self._data[i], i, valList)
             if self._data[i] != None:
                 valList.append(self._data[i])
             i += 1
         
-        #print("Start of right side.")
         i = len(self._data)-1
         while i > 1:
-            #print(self._data[i], i, valList)
+
             if self._data[i] != None:
                 valList.append(self._data[i])
             i = int(( (i+1)/2 )-1)
