@@ -93,13 +93,23 @@ class BinaryTree():
         
         for i in range(len(valList)):
             if (self.somethingNotNone(valList[i:])== False):
+                # if all values are "None" break loop - implmented this to avoid bugs in boundary traversal.
                 break     
             elif valList[i] == 'None':
                 self._data.append(None)
             else:
                 self._data.append(valList[i])
 
+   
     def somethingNotNone(self,someList):
+        """This function is used to check if a list of strings that represents a binary tree contains a value other than 'None'
+
+        Args:
+            someList (List): A subset of the list generated from a passed along string used to build a binary tree
+
+        Returns:
+            Boolean : Returns True if there is an item in the list other than 'None'
+        """
         for item in someList:
             if item != 'None':
                 return True
@@ -110,6 +120,12 @@ class BinaryTree():
         """ Prints a boundary traversal of the tree. """
 
         # TO DO: Question 2
+        
+        """
+        The following two while loops determines the filled size of the binary tree that is represented in data, and then fills each possible node of the tree with None to make it square.
+        
+        Making the binary tree complete and square does not change what is represented by the data, but makes it the proper format so that the following algorithm does not encounter any issues.
+        """
         x = 0
         while (2**x) < len(self._data):
             x += 1
@@ -117,6 +133,7 @@ class BinaryTree():
             self._data.append(None)
         
         
+        # The following block of code traverses the left side of the binary tree
         i = 1
         valList = []
        
@@ -125,12 +142,14 @@ class BinaryTree():
                 valList.append(self._data[i])
             i = i*2
         
+        # The following block of code traverses the bottom of the binary tree.
         i = int(len(self._data)/2)
         while i < len(self._data):
             if self._data[i] != None:
                 valList.append(self._data[i])
             i += 1
         
+        # The following block of code traverses the right side of the binary tree.
         i = len(self._data)-1
         while i > 1:
 
