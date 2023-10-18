@@ -89,12 +89,77 @@ class BinaryTree():
         3 has no children."""
 
         # TO DO: Question 1.
-
+        valList = s.split(", ")
+        
+        for i in range(len(valList)):
+            if valList[i] == 'None':
+                self._data.append(None)
+            else:
+                self._data.append(valList[i])
 
 
     def boundary_traversal(self):
         """ Prints a boundary traversal of the tree. """
 
-         # TO DO: Question 2
+        # TO DO: Question 2
+        x = 0
+        while (2^^x) < len(self._data):
+            
+        
+        
+        i = 1
+        valList = []
+        #print("Start of left side.")
+        while i < (len(self._data)/2):
+            #print(self._data[i], i, valList)
+            if self._data[i] != None:
+                valList.append(self._data[i])
+            i = i*2
+        
+        #print("Start of bottom side.")
+        i = int(len(self._data)/2)
+        while i < len(self._data):
+            #print(self._data[i], i, valList)
+            if self._data[i] != None:
+                valList.append(self._data[i])
+            i += 1
+        
+        #print("Start of right side.")
+        i = len(self._data)-1
+        while i > 1:
+            #print(self._data[i], i, valList)
+            if self._data[i] != None:
+                valList.append(self._data[i])
+            i = int(( (i+1)/2 )-1)
+            
+        print("Boundary Traversal: ", valList)
+                
+            
+                
 
-
+def main():
+    tree1 = BinaryTree()
+    tree2 = BinaryTree()
+    tree3 = BinaryTree()
+    
+    testStr = "1, 2, 3, None, 4"
+    tree1.read_string(testStr)
+    tree1.preorder_traversal()
+    
+    
+    testStr = "1, 2, 3, None, 4, None, None, None, None, None, None"
+    
+    tree2.read_string(testStr)
+    tree2.preorder_traversal()
+    
+    testStr = "1, 2, 3, 4, 5, 6, 7, 8, None, 9, 10, None, 11, None, None"
+    
+    tree3.read_string(testStr)
+    tree3.preorder_traversal()
+    
+    tree3.boundary_traversal()
+    tree2.boundary_traversal()
+    tree1.boundary_traversal()
+    
+if __name__ == "__main__":
+    main()
