@@ -167,28 +167,32 @@ def main():
     tree2 = BinaryTree()
     tree3 = BinaryTree()
     
-    testStr = "1, 2, 3, None, 4"
-    tree1.read_string(testStr)
+    testStr1 = "1, 2, 3, None, 4"
+    tree1.read_string(testStr1)
     tree1.preorder_traversal()
     
     
-    testStr = "1, 2, 3, None, 4, None, None, None, None, None, None"
+    testStr2 = "1, 2, 3, None, 4, None, None, None, None, None, None"
     
-    tree2.read_string(testStr)
+    tree2.read_string(testStr2)
     tree2.preorder_traversal()
     
-    testStr = "1, 2, 3, 4, 5, 6, 7, 8, None, 9, 10, None, 11, None, None"
+    testStr3 = "1, 2, 3, 4, 5, 6, 7, 8, None, 9, 10, None, 11, None, None"
     
-    tree3.read_string(testStr)
+    tree3.read_string(testStr3)
     tree3.preorder_traversal()
-    
-    tree3.boundary_traversal()
-    tree2.boundary_traversal()
+    print("Test String 1:", testStr1)
     tree1.boundary_traversal()
-    
-    testStr = "1, 2, 3, 4, None, 6, None, None, 8, None, 9, None"
+    print("Test String 2:", testStr2)
+    tree2.boundary_traversal()
+    print("Test String 3:", testStr3)
+    tree3.boundary_traversal()
+    testStr4 = "1, 2, 3, 4, None, 6, None, None, 8, None, 9, None"
     tree4 = BinaryTree()
-    tree4.read_string(testStr)
+    tree4.read_string(testStr4)
+    print("Test String 4:", testStr4)
     tree4.boundary_traversal()
+    
+    
 if __name__ == "__main__":
     main()
