@@ -186,5 +186,9 @@ def main():
     tree2.boundary_traversal()
     tree1.boundary_traversal()
     
+    testStr = "1, 2, 3, 4, None, 6, None, None, 8, None, 9, None"
+    tree4 = BinaryTree()
+    tree4.read_string(testStr)
+    tree4.boundary_traversal()
 if __name__ == "__main__":
     main()
