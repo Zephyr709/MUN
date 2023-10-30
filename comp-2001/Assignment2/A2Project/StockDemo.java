@@ -35,6 +35,8 @@ public class StockDemo
         // Take delivery of 5 items of one of the products.
         manager.delivery(132, 5);
         manager.printProductDetails();
+        manager.lowStock(3);
+        manager.findProduct("Clock Radio");
     }
     
     /**
