@@ -23,10 +23,25 @@ def testForHashCode(bits, dictonary):
                 else:
                     dictonary[i] = 1
 
-def printPossibleMessages(dictonary,bits):
-
-    return
-
+def printProbableMessages(dictonary,fragList):
+    for key,value in dictonary.items():
+        if value > 40:
+            message = ""
+            print("This message is decyphered with :", key, bin(key))
+            
+            for element in fragList:
+                
+                x = 2
+                chars = []
+                while x < len(element):
+                    chars.append(int(element[x:x+8],2))
+                    x+= 8
+                
+                for item in chars:
+                    message += chr(key ^ item)
+            
+            print(message)
+            print()
 
 
 
@@ -42,7 +57,12 @@ def main():
     for element in binaryMessageFrags: 
         testForHashCode(element,xorDictionary)
     
-    print(xorDictionary)
-    print(len(xorDictionary))
+    printProbableMessages(xorDictionary,binaryMessageFrags)
+    
     
 main()
+
+# One of the outputs of the print probable messages functions contains the hash code used for encryption along with # the message and is as follows:
+# This message is decyphered with : 190 0b10111110
+# https://www.youtube.com/watch?v=Dlto1VQ5Fv4
+# 
