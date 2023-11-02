@@ -1,4 +1,7 @@
 #Usable Ascii Chars decimal values of 32 - 126
+# Author: Jager Cooper | 201765344
+# Created: November, 2nd,2023
+
 def testForHashCode(bits, dictonary):
     """ This function parses 32-bit binary integers into 8-bit chunks representing characters
         it then tests every possible XOR value from 0-255, and if the result lands within the acceptable 
@@ -80,8 +83,9 @@ def main():
     
     
 main()
-
+"""
 # One of the outputs of the print probable messages functions contains the hash code used for encryption along with # the message and is as follows:
 # This message is decyphered with : 190 0b10111110
 # https://www.youtube.com/watch?v=Dlto1VQ5Fv4
 # 
+"""
