@@ -1,6 +1,14 @@
 #Usable Ascii Chars decimal values of 32 - 126
 def testForHashCode(bits, dictonary):
-    
+    """ This function parses 32-bit binary integers into 8-bit chunks representing characters
+        it then tests every possible XOR value from 0-255, and if the result lands within the acceptable 
+        realm of characters to construct a message, adds the hash code as a key in the dictionary and increments
+        its correlated value by 1 to illustrate the most probable hash codes to create a understandable message.
+
+    Args:
+        bits (string): 34 character long string that represents a 32-bit integer
+        dictonary (dictionary): dictionary to store the frequency of a succesful hash code
+    """
     #Parses the 32-bits into 8-bits representing chars
     i = 2
     chars = []
@@ -23,9 +31,18 @@ def testForHashCode(bits, dictonary):
                 else:
                     dictonary[i] = 1
 
-def printProbableMessages(dictonary,fragList):
+def printProbableMessages(dictonary,fragList,frequencyThreshold):
+    """ This function prints out all the total messages that get decyphered by each hash code with a frequency greater than the threshold in the possible hash code dictionary.
+       
+
+    Args:
+        dictonary (Dictionary): dictionary containing the possible hash codes and the frequency
+                                they generated an acceptable character
+        fragList (List): a list containing all the fragments of the message in binary form
+        frequencyThreshold (Integer): an integer that represents the frequency threshold of the hash codes to check
+    """
     for key,value in dictonary.items():
-        if value > 40:
+        if value > frequencyThreshold:
             message = ""
             print("This message is decyphered with :", key, bin(key))
             
@@ -51,13 +68,15 @@ def main():
     binaryMessageFrags =[]
     xorDictionary = {}
     
+    #converts each integer into its binary representation
     for message in messageFrags:
         binaryMessageFrags.append(bin(message))
     
+    # For each binary represented integer tests for hash codes that provide succesful letters
     for element in binaryMessageFrags: 
         testForHashCode(element,xorDictionary)
     
-    printProbableMessages(xorDictionary,binaryMessageFrags)
+    printProbableMessages(xorDictionary,binaryMessageFrags,40)
     
     
 main()
