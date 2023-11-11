@@ -2,6 +2,7 @@
 # Oct 2023
 
 import matplotlib.pyplot as plt
+
 import csv
 
 def map_render(vertexes, lines, pos_x=1500, pos_y=-3000, radius=250, highlighted=[]):
