@@ -83,11 +83,18 @@ class BinarySearchTree():
     def find_nearby_vertexes(self, x_centre, y_centre, radius):
         """ Returns a list of points, each as (x, y) tuple pairs, that are within the
             circle with given radius centred on position (x_centre, y_centre). """
+        ## TO DO - Question 3
+        
+        #seting the x and y coordinate boundaries
+        
         lowx = x_centre - radius
         highx = x_centre + radius
         lowy = y_centre + radius
+        highy = y_centre + radius
         
-        ## TO DO - Question 3
+        withinRange = []
+        
+        
         
 
 
