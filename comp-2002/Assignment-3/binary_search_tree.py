@@ -70,6 +70,14 @@ class BinarySearchTree():
             if x == p.item.x: # Prints a message that the vertex already exists
                 if y == p.item.y:
                     print('This vertex already exists in the tree.')
+                elif y < p.item.y:
+                    item = self._Item(x, y)
+                    c = self._Node(parent=p, item=item)
+                    p.left = c
+                else:
+                    item = self._Item(x, y)
+                    c = self._Node(parent=p, item=item)
+                    p.right = c
             elif x < p.item.x:
                 item = self._Item(x, y)
                 c = self._Node(parent=p, item=item)
@@ -89,22 +97,25 @@ class BinarySearchTree():
         
         lowx = x_centre - radius
         highx = x_centre + radius
-        lowy = y_centre + radius
+        lowy = y_centre - radius
         highy = y_centre + radius
-        
         withinRange = []
-        
+        count = 0
         for x in range(lowx, highx +1):
             for y in range(lowy, highy +1):
                 node = self.search(x,y)
-                if self.testRadiusRange(radius, node.item.x,node.item.y):
-                    withinRange.append((node.item.x,node.item.y))
-        
+                count +=1
+                if self.testRadiusRange(radius, node.item.x,node.item.y,x_centre,y_centre):
+                    if (node.item.x, node.item.y) not in withinRange:
+                        withinRange.append((node.item.x,node.item.y))
+        print(count)
+        print(withinRange)
         return withinRange
                 
 
-    def testRadiusRange(self,radius, x ,y):
-        math = sqrt(x**2+y**2)
+    def testRadiusRange(self,radius, x ,y,xcenter,ycenter): 
+        math = sqrt((x-xcenter)**2+(y-ycenter)**2)       
         if math <= radius:
             return True
-        
+
+

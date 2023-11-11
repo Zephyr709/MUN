@@ -80,14 +80,17 @@ def read_map_data(vertex_csv = Path("C:/Users/jager/OneDrive/Documents/GitHub/MU
 
 if __name__ == '__main__':
     (vertexes, lines) = read_map_data()
-    xPosition = 1500
-    yPosition = 3000
-    radius = 250
+    xPosition = 1100
+    yPosition = -3300
+    radius = 50
+
     
     #Creates and populates the tree
     myTree = bst.BinarySearchTree()
     for x,y in vertexes:
         myTree.insert(x,y)
     
+    fig = map_render(vertexes,lines,xPosition,yPosition,radius,myTree.find_nearby_vertexes(xPosition,yPosition,radius))
     
-    fig = map_render(vertexes,lines,xPosition,yPosition,radius,highlighted=myTree.find_nearby_vertexes(xPosition,yPosition,radius))
+    #for bonus points the time complexity of my algorithm is 2^(x/50) where x is the radius of the circle
+    # so it is O(2^n) :( 
