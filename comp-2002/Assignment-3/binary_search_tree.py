@@ -1,6 +1,7 @@
 # COMP 2002
 # Student name
 # Student ID
+from math import sqrt
 
 class BinarySearchTree():
 
@@ -82,6 +83,16 @@ class BinarySearchTree():
     def find_nearby_vertexes(self, x_centre, y_centre, radius):
         """ Returns a list of points, each as (x, y) tuple pairs, that are within the
             circle with given radius centred on position (x_centre, y_centre). """
-
+        lowx = x_centre - radius
+        highx = x_centre + radius
+        lowy = y_centre + radius
+        
         ## TO DO - Question 3
+        
+
+
+    def testRadiusRange(radius, x ,y):
+        math = sqrt(x**2+y**2)
+        if math <= radius:
+            return True
         

@@ -2,7 +2,7 @@
 # Oct 2023
 
 import matplotlib.pyplot as plt
-
+from pathlib import Path
 import csv
 
 def map_render(vertexes, lines, pos_x=1500, pos_y=-3000, radius=250, highlighted=[]):
@@ -54,7 +54,7 @@ def map_render(vertexes, lines, pos_x=1500, pos_y=-3000, radius=250, highlighted
     return fig
 
 
-def read_map_data(vertex_csv = 'vertexes.csv', lines_csv = 'lines.csv'):
+def read_map_data(vertex_csv = Path("C:/Users/jager/OneDrive/Documents/GitHub/MUN/comp-2002/Assignment-3/vertexes.csv"), lines_csv = Path("C:/Users/jager/OneDrive/Documents/GitHub/MUN/comp-2002/Assignment-3/lines.csv")):
     """
     Reads the vertex and line data from csv files.
 
@@ -76,3 +76,7 @@ def read_map_data(vertex_csv = 'vertexes.csv', lines_csv = 'lines.csv'):
             lines.append((int(row[0]), int(row[1])))
 
     return (vertexes, lines)
+
+if __name__ == '__main__':
+    (vertexes, lines) = read_map_data()
+    fig = map_render(vertexes,lines)
