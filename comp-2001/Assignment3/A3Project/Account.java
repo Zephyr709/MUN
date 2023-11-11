@@ -1,6 +1,6 @@
 import java.util.Random;
 
-class Account {
+abstract class Account {
     protected float balance;
     public int accountNumber;
     public String userName;
@@ -49,17 +49,15 @@ class Account {
      * @param m a float amount to deposit to the account
      */
     public void deposit(float m){
-
+        balance += m;
     }
 
     /**
-     * process a withdraw from the account
+     * Abstract method defined to process a withdraw from the account
      * 
      * @param m a float amount to withdraw from the account
      */
-    public void withdraw(float m){
-
-    }
+    public abstract void withdraw(float m);
 
     /**
      * Gets the current balance of the account and returns it.
