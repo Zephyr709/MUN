@@ -34,12 +34,12 @@ class BinarySearchTree():
         ## Currently finds the with item with key, k, in the subtree rooted at p.
         ## Modify for (x, y) positional data
 
-        if k == p.item.key:
+        if x == p.item.x and y == p.item.y:
             return p
-        elif k < p.item.key and p.left is not None:
-            return self._search(p.left, k)
-        elif k > p.item.key and p.right is not None:
-            return self._search(p.right, k)
+        elif x < p.item.x and p.left is not None:
+            return self._search(p.left, x,y)
+        elif x > p.item.x and p.right is not None:
+            return self._search(p.right, x,y)
         return p
 
 
@@ -48,7 +48,7 @@ class BinarySearchTree():
         ## Currently finds the item with key, k.
         ## Modify for (x, y) positional data.
 
-        return self._search(self._root, k)
+        return self._search(self._root, x, y)
 
 
     def insert(self, x, y):
@@ -57,10 +57,10 @@ class BinarySearchTree():
         ## Modify for (x, y) positional data.
 
         if self._root is None:
-            item = self._Item(k, v)
+            item = self._Item(x, y)
             self._root = self._Node(item=item)
         else:
-            p = self.search(k)
+            p = self.search(x)
             if k == p.item.key: # will update this item with new value
                 p.item.value = v
             elif k < p.item.key:
