@@ -4,6 +4,7 @@
 import matplotlib.pyplot as plt
 from pathlib import Path
 import csv
+import binary_search_tree as bst
 
 def map_render(vertexes, lines, pos_x=1500, pos_y=-3000, radius=250, highlighted=[]):
     """
@@ -79,4 +80,14 @@ def read_map_data(vertex_csv = Path("C:/Users/jager/OneDrive/Documents/GitHub/MU
 
 if __name__ == '__main__':
     (vertexes, lines) = read_map_data()
-    fig = map_render(vertexes,lines)
+    xPosition = 1500
+    yPosition = 3000
+    radius = 250
+    
+    #Creates and populates the tree
+    myTree = bst.BinarySearchTree()
+    for x,y in vertexes:
+        myTree.insert(x,y)
+    
+    
+    fig = map_render(vertexes,lines,xPosition,yPosition,radius,highlighted=myTree.find_nearby_vertexes(xPosition,yPosition,radius))

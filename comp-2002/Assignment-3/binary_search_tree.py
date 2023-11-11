@@ -1,6 +1,6 @@
 # COMP 2002
-# Student name
-# Student ID
+# Jager Cooper
+# 201765344
 from math import sqrt
 
 class BinarySearchTree():
@@ -94,11 +94,16 @@ class BinarySearchTree():
         
         withinRange = []
         
+        for x in range(lowx, highx +1):
+            for y in range(lowy, highy +1):
+                node = self.search(x,y)
+                if self.testRadiusRange(radius, node.item.x,node.item.y):
+                    withinRange.append((node.item.x,node.item.y))
         
-        
+        return withinRange
+                
 
-
-    def testRadiusRange(radius, x ,y):
+    def testRadiusRange(self,radius, x ,y):
         math = sqrt(x**2+y**2)
         if math <= radius:
             return True
