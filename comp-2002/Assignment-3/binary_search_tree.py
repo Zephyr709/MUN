@@ -101,6 +101,7 @@ class BinarySearchTree():
         highy = y_centre + radius
         withinRange = []
         count = 0
+        
         for x in range(lowx, highx +1):
             for y in range(lowy, highy +1):
                 node = self.search(x,y)
