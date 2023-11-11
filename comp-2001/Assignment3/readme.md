@@ -1,7 +1,7 @@
 
 # Assignment 3 Instructions
 
-## COMP2001, Fall 2023 
+## COMP2001, Fall 2023
 
 ### Due: November 16, 2023 @ 11:00pm
 
@@ -37,7 +37,7 @@ The Saving class should have the following member functions:
 
 - A withdraw function that withdraws money according to the user's request. In this function, check if this withdrawal is allowed according to the available balance for each time. Apply a service fee for each time a withdrawal is made. Update the balance.
 
-#### Create a Bank class to maintain the accounts, which has members bankName and an ArrayList accounts that store checking and saving accounts. The Bank class should have the following member functions:
+#### Create a Bank class to maintain the accounts, which has members bankName and an ArrayList accounts that store checking and saving accounts. The Bank class should have the following member functions
 
 - Bank(): the default constructor that creates a new empty account list (using ArrayList).
 
@@ -49,7 +49,7 @@ The Saving class should have the following member functions:
 
 - void display(String user): displays the bank name and the list of accounts of a specific user name (including the user’s name, balance, and the type of account (whether it is Saving or not)).
 
-#### Finally, test the functionality of the program with the following steps:
+#### Finally, test the functionality of the program with the following steps
 
 - Create a saving account with the user name "John," deposit and withdraw money, and display the balance to test the logic.
 
