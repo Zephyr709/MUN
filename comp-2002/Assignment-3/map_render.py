@@ -80,9 +80,9 @@ def read_map_data(vertex_csv = Path("C:/Users/jager/OneDrive/Documents/GitHub/MU
 
 if __name__ == '__main__':
     (vertexes, lines) = read_map_data()
-    xPosition = 1100
+    xPosition = 300
     yPosition = -3300
-    radius = 50
+    radius = 500
 
     
     #Creates and populates the tree
@@ -93,4 +93,4 @@ if __name__ == '__main__':
     fig = map_render(vertexes,lines,xPosition,yPosition,radius,myTree.find_nearby_vertexes(xPosition,yPosition,radius))
     
     #for bonus points the time complexity of my algorithm is 2^(x/50) where x is the radius of the circle
-    # so it is O(2^n) :( 
+    # so it is O(2^n) :(
