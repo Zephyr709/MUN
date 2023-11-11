@@ -13,7 +13,7 @@ abstract class Account {
      * Initaialzes the balance to 0
      */
     public Account(){
-        accountNumber = rand.nextInt();
+        accountNumber = Math.abs(rand.nextInt());
         balance = 0;
         userName = "N/A";
     }
@@ -27,7 +27,7 @@ abstract class Account {
      * @Param String User, the user name to associate with the account
      */
     public Account(String user){
-        accountNumber = rand.nextInt();
+        accountNumber = Math.abs(rand.nextInt());
         balance = 0;
         userName = user;
     }
@@ -38,9 +38,11 @@ abstract class Account {
      */
     public void display(){
         System.out.println("User name: " + userName);
+        System.out.println("Account Type: " + this.getClass().getName());
         System.out.println("Account Number: " + accountNumber);
         System.out.println("Balance: " + balance);
         System.out.println();
+        
     }
 
     /**

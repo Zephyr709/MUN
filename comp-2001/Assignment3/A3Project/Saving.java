@@ -6,7 +6,7 @@ public class Saving extends Account {
      * Default constructor
      */
     public Saving(){
-
+        super();
     }
     /**
      * Constructor with user name parameter
@@ -14,7 +14,7 @@ public class Saving extends Account {
      * @param user
      */
     public Saving(String user){
-
+        super(user);
     }
 
     /**
@@ -26,6 +26,8 @@ public class Saving extends Account {
     public void withdraw(float m){
         if (m <= balance){
             balance = balance - m - eachTimeCharge;
+        } else {
+            System.out.println("Insufficient Funds.");
         }
     }
 
