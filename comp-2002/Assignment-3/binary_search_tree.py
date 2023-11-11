@@ -34,8 +34,13 @@ class BinarySearchTree():
         ## Currently finds the with item with key, k, in the subtree rooted at p.
         ## Modify for (x, y) positional data
 
-        if x == p.item.x and y == p.item.y:
-            return p
+        if x == p.item.x :
+            if y == p.item.y:
+                return p
+            elif y < p.item.y and p.left is not None:
+                return self._search(p.left, x,y)
+            elif y > p.item.y and p.right is not None:
+                return self._search(p.right, x,y)
         elif x < p.item.x and p.left is not None:
             return self._search(p.left, x,y)
         elif x > p.item.x and p.right is not None:
@@ -60,15 +65,16 @@ class BinarySearchTree():
             item = self._Item(x, y)
             self._root = self._Node(item=item)
         else:
-            p = self.search(x)
-            if k == p.item.key: # will update this item with new value
-                p.item.value = v
-            elif k < p.item.key:
-                item = self._Item(k, v)
+            p = self.search(x,y)
+            if x == p.item.x: # Prints a message that the vertex already exists
+                if y == p.item.y:
+                    print('This vertex already exists in the tree.')
+            elif x < p.item.x:
+                item = self._Item(x, y)
                 c = self._Node(parent=p, item=item)
                 p.left = c
             else:
-                item = self._Item(k, v)
+                item = self._Item(x, y)
                 c = self._Node(parent=p, item=item)
                 p.right = c
 
