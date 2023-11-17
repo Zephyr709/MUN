@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Account
+comment1.params=
+comment1.target=Account()
+comment1.text=\r\n\ Default\ constructor\ \r\n\ Initializes\ the\ userName\ with\ N/A\r\n\ Initializes\ the\ account\ number\ with\ a\ random\ integer\r\n\ Initaialzes\ the\ balance\ to\ 0\r\n
+comment2.params=user
+comment2.target=Account(java.lang.String)
+comment2.text=\r\n\ Parmeterized\ constructor\r\n\ Initializes\ the\ account\ number\ with\ a\ random\ integer\r\n\ Initializes\ the\ balance\ to\ 0\r\n\ Initaialzes\ the\ userName\ with\ user\ parameter\r\n\ \r\n\ @Param\ String\ User,\ the\ user\ name\ to\ associate\ with\ the\ account\r\n
+comment3.params=
+comment3.target=void\ display()
+comment3.text=\r\n\ Prints\ out\ all\ the\ details\ associated\ with\ the\ account\r\n\ \r\n
+comment4.params=m
+comment4.target=void\ deposit(float)
+comment4.text=\r\n\ Processes\ a\ deposit\ into\ the\ account\r\n\ \r\n\ @param\ m\ a\ float\ amount\ to\ deposit\ to\ the\ account\r\n
+comment5.params=m
+comment5.target=void\ withdraw(float)
+comment5.text=\r\n\ Abstract\ method\ defined\ to\ process\ a\ withdraw\ from\ the\ account\r\n\ \r\n\ @param\ m\ a\ float\ amount\ to\ withdraw\ from\ the\ account\r\n
+comment6.params=
+comment6.target=float\ getBalance()
+comment6.text=\r\n\ Gets\ the\ current\ balance\ of\ the\ account\ and\ returns\ it.\r\n\ \r\n\ @return\ Float,\ the\ current\ balance\ of\ the\ account\r\n
+comment7.params=
+comment7.target=java.lang.String\ getUserName()
+comment7.text=\r\n\ Gets\ the\ user\ name\ of\ the\ account\ and\ returns\ it.\r\n\ \r\n\ @return\ String,\ the\ user\ name\ associated\ with\ the\ account\r\n
+numComments=8

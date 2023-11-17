@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Saving
+comment1.params=
+comment1.target=Saving()
+comment1.text=\r\n\ Default\ constructor\r\n
+comment2.params=user
+comment2.target=Saving(java.lang.String)
+comment2.text=\r\n\ Constructor\ with\ user\ name\ parameter\r\n\ \r\n\ @param\ user\r\n
+comment3.params=m
+comment3.target=void\ withdraw(float)
+comment3.text=\r\n\ Makes\ a\ withdraw\ from\ the\ account\ if\ the\ withdraw\ amount\ is\ less\ than\ or\ equal\ to\ the\r\n\ the\ balance\ of\ the\ account\ and\ incurrs\ the\ associated\ eachTimeCharge\ \r\n\ \r\n\ @param\ m\ ,\ Float\ value\ to\ withdraw\ from\ the\ account\r\n
+numComments=4

@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Bank
+comment1.params=
+comment1.target=Bank()
+comment1.text=\r\n\ Default\ Constructor\r\n
+comment2.params=bankName
+comment2.target=Bank(java.lang.String)
+comment2.text=\r\n\ Constructor\ with\ bankName\ parameter\r\n\ \r\n\ @param\ bankName\ ,\ String\ \:\ the\ name\ of\ the\ bank\r\n
+comment3.params=account
+comment3.target=void\ add(Account)
+comment3.text=\r\n\ Adds\ a\ new\ account\ to\ the\ bank\r\n\ \r\n\ @param\ account\ ,\ Account\ \:\ an\ account\ to\ add\ to\ the\ bank\r\n
+comment4.params=
+comment4.target=void\ display()
+comment4.text=\r\n\ Displays\ the\ bank\ name,and\ the\ full\ list\ of\ accounts\ at\ the\ bank\r\n
+comment5.params=user
+comment5.target=void\ display(java.lang.String)
+comment5.text=\r\n\ Displays\ the\ bank\ name,\ and\ all\ accounts\ associated\ with\ the\ user\ name\ \r\n\ \r\n\ @param\ user\ ,\ String\ \:\ user\ name\ to\ search\ owned\ accounts\ for\r\n
+numComments=6

@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Cheque
+comment1.params=
+comment1.target=Cheque()
+comment1.text=\r\n\ Default\ Constructor\r\n
+comment2.params=user
+comment2.target=Cheque(java.lang.String)
+comment2.text=\r\n\ Constructor\ with\ User\ name\ parameter\r\n\ \r\n\ @param\ user\ String,\ user\ name\ to\ assign\ to\ the\ account\r\n
+comment3.params=m
+comment3.target=void\ withdraw(float)
+comment3.text=\r\n\ Makes\ a\ withdraw\ from\ the\ account\ if\ the\ withdraw\ amount\ is\ less\ than\ the\ balance\r\n\ of\ the\ account,\ and\ if\ the\ resulting\ balance\ is\ less\ than\ the\ minimBalance\ incurrs\r\n\ the\ associated\ overLimitCharge\r\n\ \r\n\ @param\ m\ Float,\ value\ to\ withdraw\ from\ the\ account\r\n
+numComments=4
