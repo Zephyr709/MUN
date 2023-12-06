@@ -1,7 +1,6 @@
 public class Savings extends Account {
 
     private static final double WITHDRAW_FEE = 6.99;
-    private static final double INTEREST = 0.019;
 
     public Savings(String accountName) {
         super(accountName);
@@ -11,4 +10,11 @@ public class Savings extends Account {
         super(accountName, balance);
     }
 
+    public void withdraw(double amount) {
+        if ((amount + WITHDRAW_FEE) > balance) {
+            System.out.println("You have insufficent funds to withdraw");
+        } else {
+            balance -= WITHDRAW_FEE + amount;
+        }
+    }
 }

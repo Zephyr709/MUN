@@ -11,7 +11,7 @@ public abstract class Account {
     public Account(String accountName) {
 
         this.accountName = accountName;
-        accountNumber = rand.nextInt(1000000);
+        accountNumber = rand.nextInt(100);
         balance = 0.0;
 
     }

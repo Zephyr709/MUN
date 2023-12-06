@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Bank {
 
@@ -23,6 +24,17 @@ public class Bank {
 
     public String getInstutionNumber() {
         return instutionNumber;
+    }
+
+    public void removeAccount(int accountNumber) {
+        for (Iterator<Account> iterator = accounts.iterator(); iterator.hasNext();) {
+            Account item = iterator.next();
+
+            if (item.getAccountNumber() == (accountNumber)) {
+                iterator.remove();
+                return;
+            }
+        }
     }
 
 }
