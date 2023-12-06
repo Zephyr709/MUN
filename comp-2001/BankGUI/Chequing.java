@@ -1,3 +1,3 @@
-public class Chequing {
+public class Chequing extends Account {
 
 }
