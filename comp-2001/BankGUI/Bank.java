@@ -4,12 +4,17 @@ import java.util.Iterator;
 public class Bank {
 
     private String bankName;
-    private String instutionNumber;
+    private String institutionNumber;
     private ArrayList<Account> accounts;
 
-    public Bank(String bankName, String instutionNumber) {
+    public Bank() {
+        bankName = "CIBC";
+        institutionNumber = "150";
+    }
+
+    public Bank(String bankName, String institutionNumber) {
         this.bankName = bankName;
-        this.instutionNumber = instutionNumber;
+        this.institutionNumber = institutionNumber;
         accounts = new ArrayList<Account>();
     }
 
@@ -22,8 +27,12 @@ public class Bank {
         return bankName;
     }
 
-    public String getInstutionNumber() {
-        return instutionNumber;
+    public String getInstitutionNumber() {
+        return institutionNumber;
+    }
+
+    public ArrayList<Account> getAccounts() {
+        return accounts;
     }
 
     public void removeAccount(int accountNumber) {
